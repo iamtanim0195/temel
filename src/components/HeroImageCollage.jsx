@@ -1,0 +1,146 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import Image from "next/image";
+
+const DEFAULT_ITEMS = [
+    {
+        id: 1,
+        image: "/image/home-1.jpg",
+
+        title: "Pergola systems",
+        description:
+            "A sun protection system that allows you to be outdoors while still enjoying the protected feeling of an enclosed space.",
+    },
+    {
+        id: 2,
+        image: "/image/home-2.jpg",
+
+        title: "Pergola systems",
+        description:
+            "A sun protection system that allows you to be outdoors while still enjoying the protected feeling of an enclosed space.",
+    },
+    {
+        id: 3,
+        image: "/image/home-3.jpg",
+
+        title: "Pergola systems",
+        description:
+            "A sun protection system that allows you to be outdoors while still enjoying the protected feeling of an enclosed space.",
+    },
+    {
+        id: 4,
+        image: "/image/home-4.png",
+
+        title: "Pergola systems",
+        description:
+            "A sun protection system that allows you to be outdoors while still enjoying the protected feeling of an enclosed space.",
+    },
+];
+
+export default function HeroImageCollage({ items = DEFAULT_ITEMS }) {
+    const [current, setCurrent] = useState(0);
+
+    // Auto slide for mobile slider
+    useEffect(() => {
+        if (items.length <= 1) return;
+
+        const id = setInterval(() => {
+            setCurrent((prev) => (prev + 1) % items.length);
+        }, 5000); // 5s per slide
+
+        return () => clearInterval(id);
+    }, [items.length]);
+
+    const goToSlide = (index) => setCurrent(index);
+
+    return (
+        <section className="bg-base-100 py-10 sm:py-16">
+            <div className="mx-auto max-w-6xl px-4 sm:px-6">
+                {/* MOBILE: SIMPLE AUTO SLIDER (IMAGE ONLY) */}
+                <div className="lg:hidden">
+                    <div className="relative overflow-hidden rounded-lg bg-neutral/20 aspect-[4/3] sm:aspect-[16/9]">
+                        {items.map((item, index) => (
+                            <div
+                                key={item.id}
+                                className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${index === current ? "opacity-100" : "opacity-0"
+                                    }`}
+                            >
+                                <Image
+                                    src={item.image}
+                                    alt={item.title || item.label || "Product image"}
+                                    fill
+                                    className="object-cover"
+                                    sizes="100vw"
+                                />
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* dots */}
+                    <div className="mt-4 flex justify-center gap-2">
+                        {items.map((_, index) => (
+                            <button
+                                key={index}
+                                onClick={() => goToSlide(index)}
+                                aria-label={`Go to slide ${index + 1}`}
+                                className={`h-2.5 rounded-full transition-all ${index === current
+                                    ? "w-6 bg-primary"
+                                    : "w-2.5 bg-base-content/40 hover:bg-base-content/70"
+                                    }`}
+                            />
+                        ))}
+                    </div>
+                </div>
+
+                {/* DESKTOP & TABLET: 2×2 COLLAGE */}
+                <div className="hidden lg:grid grid-cols-2 gap-4">
+                    {items.map((item) => (
+                        <div
+                            key={item.id}
+                            className="relative overflow-hidden rounded-lg bg-neutral/20 group"
+                        >
+                            {/* keep all tiles same aspect ratio -> same size */}
+                            <div className="relative aspect-[4/3] xl:aspect-[16/9]">
+                                <Image
+                                    src={item.image}
+                                    alt={item.title || item.label || "Product image"}
+                                    fill
+                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                    sizes="(min-width: 1024px) 50vw, 100vw"
+                                />
+                            </div>
+
+                            {/* overlay */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+
+                            {/* text */}
+                            <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5 md:p-6">
+                                {item.label && (
+                                    <p className="text-[10px] sm:text-xs font-semibold tracking-[0.22em] uppercase text-base-100/80">
+                                        {item.label}
+                                    </p>
+                                )}
+
+                                {(item.title || item.description) && (
+                                    <div className="mt-1">
+                                        {item.title && (
+                                            <h3 className="text-sm sm:text-base md:text-lg font-semibold text-base-100">
+                                                {item.title}
+                                            </h3>
+                                        )}
+                                        {item.description && (
+                                            <p className="mt-2 text-[11px] sm:text-xs md:text-sm text-base-100/85 max-w-md">
+                                                {item.description}
+                                            </p>
+                                        )}
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+}
