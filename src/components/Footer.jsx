@@ -70,7 +70,7 @@ const footerColumns = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#33373a] text-white pt-12 pb-6 mt-16">
+    <footer className="bg-[#33373a] text-white pt-8 pb-6 mt-2">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Logo */}
         <div className="flex justify-center">
@@ -130,7 +130,7 @@ export default function Footer() {
         <div className="mt-10 border-t border-white/20 pt-4 text-center text-[11px] sm:text-xs text-white/60">
           © 2023 TEMEL Planen | Alle Rechte vorbehalten | Entwicklung:{" "}
           <a href="#" className="underline hover:text-[#6A8C87]">
-            INCONCEPTS Online Marketing &amp; SEO Agentur Wien
+            https://onvendo.com/
           </a>
         </div>
       </div>

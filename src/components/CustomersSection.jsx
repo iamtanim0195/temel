@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import {
     FaApple,
     FaGoogle,
@@ -34,39 +35,23 @@ const BRANDS = [
 
 export default function CustomersSection() {
     return (
-        <section className="bg-base-100 py-16 sm:py-20">
-            <div className="mx-auto max-w-6xl px-4 sm:px-6 text-center">
+        <section className="bg-base-100 py-8 ">
+            <div className="mx-auto max-w-6xl  px-4 sm:px-6 text-center">
                 {/* Title */}
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-base-content">
                     Kunden die uns vertrauen
                 </h2>
 
-                {/* Subtle subtitle (optional) */}
-                <p className="mt-3 text-sm sm:text-base text-base-content/70 max-w-2xl mx-auto">
-                    A selection of brands and companies that rely on our sun protection
-                    solutions.
-                </p>
-
-                {/* Logo grid */}
-                <div className=" mt-10 sm:mt-12 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4 sm:gap-6 md:gap-8">
-                    {BRANDS.map(({ id, name, Icon }) => (
-                        <div
-                            key={id}
-                            className="flex items-center justify-center rounded-lg bg-base-200/70 hover:bg-base-300/80
-                         transition-colors px-3 py-3 sm:px-4 sm:py-4 shadow-sm  "
-                        >
-                            <div className="flex flex-col items-center gap-2 ">
-                                <Icon className="text-2xl sm:text-3xl text-base-content/80" />
-                                <span className="text-[10px] sm:text-xs font-medium text-base-content/70">
-                                    {name}
-                                </span>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+                <Image
+                    src="/image/customers.png"
+                    alt="Customers Section"
+                    width={500}
+                    height={50}
+                    className="object-contain w-full max-w-full mt-4"
+                />
 
                 {/* CTA button */}
-                <div className="mt-10 sm:mt-12">
+                <div className="mt-4 ">
                     <a
                         href="/kontakt"
                         className="inline-flex items-center rounded-full bg-[#62c3ac]

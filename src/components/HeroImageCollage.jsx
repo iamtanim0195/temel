@@ -106,6 +106,7 @@ export default function HeroImageCollage({ items = DEFAULT_ITEMS }) {
         <section className="bg-base-100 py-10 sm:py-16">
             <div className="mx-auto max-w-6xl px-4 sm:px-6">
                 {/* MOBILE: SIMPLE AUTO SLIDER (IMAGE ONLY) */}
+                {/*
                 <div className="lg:hidden">
                     <div className="relative overflow-hidden rounded-lg bg-neutral/20 aspect-[4/3] sm:aspect-[16/9]">
                         {items.map((item, index) => (
@@ -125,24 +126,25 @@ export default function HeroImageCollage({ items = DEFAULT_ITEMS }) {
                         ))}
                     </div>
 
-                    {/* dots */}
-                    <div className="mt-4 flex justify-center gap-2">
-                        {items.map((_, index) => (
-                            <button
-                                key={index}
-                                onClick={() => goToSlide(index)}
-                                aria-label={`Go to slide ${index + 1}`}
-                                className={`h-2.5 rounded-full transition-all ${index === current
-                                    ? "w-6 bg-primary"
-                                    : "w-2.5 bg-base-content/40 hover:bg-base-content/70"
-                                    }`}
-                            />
-                        ))}
-                    </div>
+                     /*dots* 
+                <div className="mt-4 flex justify-center gap-2">
+                    {items.map((_, index) => (
+                        <button
+                            key={index}
+                            onClick={() => goToSlide(index)}
+                            aria-label={`Go to slide ${index + 1}`}
+                            className={`h-2.5 rounded-full transition-all ${index === current
+                                ? "w-6 bg-primary"
+                                : "w-2.5 bg-base-content/40 hover:bg-base-content/70"
+                                }`}
+                        />
+                    ))}
                 </div>
+            </div> 
+        */}
 
                 {/* DESKTOP & TABLET: 2×2 COLLAGE */}
-                <div className="hidden lg:grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                     {items.map((item) => (
                         <div
                             key={item.id}
@@ -189,6 +191,6 @@ export default function HeroImageCollage({ items = DEFAULT_ITEMS }) {
                     ))}
                 </div>
             </div>
-        </section>
+        </section >
     );
 }

@@ -75,10 +75,11 @@ export default function Top() {
                         />
                     </a>
                 </div>
+                {/* 
                 <div className="icon-float">
                     <ThemeToggle />
                 </div>
-
+                */}
             </div>
         </div>
     );

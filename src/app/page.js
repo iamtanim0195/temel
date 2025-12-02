@@ -1,5 +1,4 @@
 import CustomersSection from "@/components/CustomersSection";
-import Footer from "@/components/Footer";
 import Hero2Section from "@/components/Hero2Section";
 import Hero3Section from "@/components/Hero3Section";
 import HeroImageCollage from "@/components/HeroImageCollage";
@@ -17,7 +16,6 @@ export default function HomePage() {
       <CustomersSection />
       <TopServiceSection />
       <SunProtectionSection />
-      <Footer />
     </div>
   );
 }
