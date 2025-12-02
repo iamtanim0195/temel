@@ -4,13 +4,14 @@ import { useState } from "react";
 import Link from "next/link";
 import Top from "./Top";
 import HeroSlider from "./HeroSlider";
+import Image from "next/image";
 
 const NAV_ITEMS = [
-    { label: "Products", href: "#products" },
-    { label: "Catering", href: "catering" },
-    { label: "References", href: "#references" },
-    { label: "About us", href: "about" },
-    { label: "Contact", href: "contact" },
+    { label: "produkte", href: "#produkte" },
+    { label: "Gastronomie & Hotellerie", href: "gastronomie" },
+    { label: "referenzen", href: "#referenzen" },
+    { label: "Über uns", href: "unternehmen" },
+    { label: "kontakt", href: "kontakt" },
 ];
 
 export default function HeroSection() {
@@ -31,19 +32,13 @@ export default function HeroSection() {
                     <div className="mt-2 flex items-center justify-between gap-4">
                         {/* LOGO */}
                         <Link href="/" className="flex items-center gap-3">
-                            <div className="h-9 w-9 rounded-full border border-white/60 flex items-center justify-center">
-                                <span className="text-xs tracking-[0.25em] text-white/80">
-                                    TP
-                                </span>
-                            </div>
-                            <div className="leading-tight">
-                                <div className="text-sm md:text-base font-semibold tracking-[0.18em] uppercase">
-                                    TEMEL PLANEN
-                                </div>
-                                <div className="text-[10px] text-white/70 uppercase tracking-[0.25em]">
-                                    Qualität hat ihren Namen
-                                </div>
-                            </div>
+                            <Image
+                                src="/image/logo.webp"
+                                alt="Temel Planen Logo"
+                                width={150}
+                                height={50}
+                                className="object-contain"
+                            />
                         </Link>
 
                         {/* DESKTOP NAV */}

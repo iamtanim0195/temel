@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { MdLocationOn, MdPhone, MdPhoneAndroid } from "react-icons/md";
 
@@ -7,8 +8,8 @@ const contactBoxes = [
   {
     id: 1,
     icon: <MdLocationOn className="text-2xl" />,
-    title: "Location & Showroom",
-    lines: ["Dreherstraße 75a", "1110 Vienna"],
+    title: "Standort & Showroom",
+    lines: ["Dreherstraße 75a", "1110 Wien"],
   },
   {
     id: 2,
@@ -26,46 +27,43 @@ const contactBoxes = [
 
 const footerColumns = [
   {
-    heading: "Sun protection Vienna",
+    heading: "Sonnenschutz Wien",
     links: [
-      "Pergola Vienna",
-      "Louvered roof Vienna & Lower Austria",
-      "Glass roof",
-      "Awnings",
-      "Roller shutters/roller blinds",
-      "Heavy-duty parasol / Windproof parasol",
-      "Folding roof",
-      "Custom-made PVC tarpaulins",
-      "Insect protection",
+      "Pergola Wien",
+      "Lamellendach Wien & NÖ",
+      "Glasdach",
+      "Markisen",
+      "Rollladen/Rolläden",
+      "Starkwindschirm / Windfester Sonnenschirm",
+      "Faltdach",
+      "PVC-Planen nach Maß",
+      "Insektenschutz",
     ],
   },
   {
-    heading: "Sun protection for the catering industry",
-    links: [
-      "Gastronomy & Hotel Industry",
-      "Outdoor seating & dining area",
-    ],
+    heading: "Gastronomie Sonnenschutz",
+    links: ["Gastronomie & Hotellerie", "Schanigarten & Gastgarten"],
   },
   {
     heading: "About",
     links: [
-      "Commercial References",
-      "Private References",
-      "Contact",
-      "Imprint",
-      "Privacy Policy",
-      "Terms and Conditions",
-      "Cookie Policy (EU)",
+      "Referenzen Gewerbe",
+      "Referenzen Privat",
+      "Kontakt",
+      "Impressum",
+      "Datenschutzerklärung",
+      "AGB",
+      "Cookie-Richtlinie (EU)",
     ],
   },
   {
-    heading: "Interesting facts",
+    heading: "Wissenswertes",
     links: [
-      "Types of louvered roofs",
-      "Intelligently extend your patio roof",
-      "Types of patio roofs & patio shading",
-      "How to clean blinds properly",
-      "Cleaning an awning – here’s how",
+      "Arten von Lamellendächern",
+      "Terrassenüberdachung intelligent erweitern: Verschlusssysteme & weitere Ergänzungsmöglichkeiten",
+      "Die Arten von Terrassenüberdachungen & Terrassenbeschattungen",
+      "Jalousien richtig reinigen – so geht’s",
+      "Markise reinigen – so geht’s",
     ],
   },
 ];
@@ -77,19 +75,13 @@ export default function Footer() {
         {/* Logo */}
         <div className="flex justify-center">
           <Link href="/" className="flex items-center gap-3">
-            <div className="h-9 w-9 rounded-full border border-white/60 flex items-center justify-center">
-              <span className="text-xs tracking-[0.25em] text-white/80">
-                TP
-              </span>
-            </div>
-            <div className="leading-tight">
-              <div className="text-sm md:text-base font-semibold tracking-[0.18em] uppercase">
-                TEMEL PLANEN
-              </div>
-              <div className="text-[10px] text-white/70 uppercase tracking-[0.25em]">
-                Qualität hat ihren Namen
-              </div>
-            </div>
+            <Image
+              src="/image/logo.webp"
+              alt="Temel Planen Logo"
+              width={150}
+              height={50}
+              className="object-contain"
+            />
           </Link>
         </div>
 
@@ -121,7 +113,6 @@ export default function Footer() {
               <ul className="space-y-1 text-white/80">
                 {col.links.map((item) => (
                   <li key={item}>
-                    {/* Replace href="#" with real URLs where needed */}
                     <Link
                       href="#"
                       className="hover:text-[#6A8C87] transition-colors"
@@ -137,12 +128,9 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-10 border-t border-white/20 pt-4 text-center text-[11px] sm:text-xs text-white/60">
-          © 2023 TEMEL Planen | All rights reserved | Development:{" "}
-          <a
-            href="#"
-            className="underline hover:text-[#6A8C87]"
-          >
-            INCONCEPTS Online Marketing &amp; SEO Agency Vienna
+          © 2023 TEMEL Planen | Alle Rechte vorbehalten | Entwicklung:{" "}
+          <a href="#" className="underline hover:text-[#6A8C87]">
+            INCONCEPTS Online Marketing &amp; SEO Agentur Wien
           </a>
         </div>
       </div>

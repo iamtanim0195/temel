@@ -6,26 +6,26 @@ const FEATURES = [
     {
         id: 1,
         icon: <FaShieldAlt className="text-4xl mb-4" />,
-        title: "Your expert for sun protection",
-        text: "Over 30 years of experience in sun protection technology and truck tarpaulins.",
+        title: "Ihr Experte für Sonnenschutz",
+        text: "Über 30 Jahre Erfahrung in Sonnenschutztechnik und LKW-Planen",
     },
     {
         id: 2,
         icon: <FaHome className="text-4xl mb-4" />,
-        title: "Modern solutions for your home",
-        text: "Innovative sun protection technology for your comfort.",
+        title: "Moderne Lösungen für Ihr Zuhause",
+        text: "Innovative Sonnenschutztechnik für Ihren Komfort",
     },
     {
         id: 3,
         icon: <FaLeaf className="text-4xl mb-4" />,
-        title: "Quality products for sustainability",
-        text: "Durable sun protection systems for your home.",
+        title: "Qualitätsprodukte für Nachhaltigkeit",
+        text: "Langlebige Sonnenschutzsysteme für Ihr Zuhause",
     },
     {
         id: 4,
         icon: <FaBuilding className="text-4xl mb-4" />,
-        title: "Visit us in person",
-        text: "Experience our shading solutions in the showroom.",
+        title: "Besuchen Sie uns vor Ort",
+        text: "Erleben Sie unsere Beschattungslösungen im Schauraum",
     },
 ];
 
@@ -35,8 +35,8 @@ export default function SunProtectionSection() {
             <div className="mx-auto max-w-6xl px-4 sm:px-6">
                 {/* Heading */}
                 <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-semibold text-white">
-                    Why sun protection for{" "}
-                    <span className="text-[#6A8C87]">TEMEL tarpaulins?</span>
+                    Warum Sonnenschutz bei{" "}
+                    <span className="text-[#6A8C87]">TEMEL Planen?</span>
                 </h2>
 
                 {/* Cards */}

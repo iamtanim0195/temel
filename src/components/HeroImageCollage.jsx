@@ -6,35 +6,83 @@ import Image from "next/image";
 const DEFAULT_ITEMS = [
     {
         id: 1,
-        image: "/image/home-1.jpg",
+        image: "/image/collage-1.png",
 
-        title: "Pergola systems",
+        title: "Lamellendach",
         description:
-            "A sun protection system that allows you to be outdoors while still enjoying the protected feeling of an enclosed space.",
+            "Eine beliebte Art der Terrassenüberdachung stellt das Lamellendach dar, welches aus einer Gestellkonstruktion mit einzelnen Lamellen besteht.",
     },
     {
         id: 2,
-        image: "/image/home-2.jpg",
+        image: "/image/home-1.webp",
 
         title: "Pergola systems",
         description:
-            "A sun protection system that allows you to be outdoors while still enjoying the protected feeling of an enclosed space.",
+            "Ein Sonnenschutzsystem, bei dem Sie draußen sein und doch das geschützte Gefühl eines Raumes genießen können. Unsere maßgeschneiderten Pergolasysteme verwandeln Ihre Terrasse in einen vollwertigen Wohlfühlbereich.",
     },
     {
         id: 3,
-        image: "/image/home-3.jpg",
+        image: "/image/collage-2.png",
 
-        title: "Pergola systems",
+        title: "GLASDÄCHER",
         description:
-            "A sun protection system that allows you to be outdoors while still enjoying the protected feeling of an enclosed space.",
+            "Das TEMEL Terrassendach vereint ansprechendes Design mit individuell abstimmbarer Funktionalität.",
     },
     {
         id: 4,
-        image: "/image/home-4.png",
+        image: "/image/collage-3.png",
 
-        title: "Pergola systems",
+        title: "VERSCHLUSSSYSTEME",
         description:
-            "A sun protection system that allows you to be outdoors while still enjoying the protected feeling of an enclosed space.",
+            "Die perfekte Ergänzung für Ihre Terrassenüberdachung",
+    },
+    {
+        id: 5,
+        image: "/image/collage-4.png",
+
+        title: "MARKISEN",
+        description:
+            "Sie benötigen einen effektiven Sonnenschutz für Ihren Außenbereich? TEMEL PLANEN bietet robuste, moderne Markisen, die sich durch Qualität und Individualität auszeichnen.",
+    },
+    {
+        id: 6,
+        image: "/image/collage-5.png",
+
+        title: "FIXE SONNENSEGEL",
+        description:
+            "Bei Temel erwarten Sie maßgeschneiderte Lösungen für Sonnensegel, die sowohl durch erstklassige Qualität als auch ansprechendes und modernes Design",
+    },
+    {
+        id: 7,
+        image: "/image/collage-6.png",
+
+        title: "ROLLLÄDEN",
+        description:
+            "TEMEL Rollläden sind vielseitig. Ästhetisch und unauffällig zugleich bieten sie überzeugende und funktionale Vorteile an Sicht-, Wärme-und Schallschutz, die jeder",
+    },
+    {
+        id: 8,
+        image: "/image/collage-7.png",
+
+        title: "INSEKTENSCHUTZ",
+        description:
+            "Temel Planen hilft Ihnen Ihre Abende und Nächte ohne lästige Insekten wieder zu genießen. Unser Insektenschutzgitter wird für Ihre Fenster, Türen oder Dachflächenfenster ganz nach Maß",
+    },
+    {
+        id: 9,
+        image: "/image/collage-8.png",
+
+        title: "STARKWINDSCHIRME",
+        description:
+            "Starkwindschirme von TEMEL finden überall dort ihren Einsatzort, wo besondere Witterungsverhältnisse herrschen.",
+    },
+    {
+        id: 10,
+        image: "/image/collage-9.png",
+
+        title: "PLANEN & MARKISENSTOFFE NACH MASS",
+        description:
+            "Wind, Regen und Frost - all dem sind Planen ungeschützt ausgesetzt. Egal, ob für LKW oder Ihr Schwimmbad - die Planen von TEMEL überzeugen durch Qualität und hochwertige Verarbeitung.",
     },
 ];
 

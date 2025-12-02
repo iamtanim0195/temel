@@ -6,40 +6,36 @@ import Image from "next/image";
 const slides = [
     {
         id: 1,
-        image: "/image/home-1.jpg",
+        image: "/image/home-1.webp",
         titleLines: [
-            "A SUN PARADISE THROUGH",
-            "INNOVATIVE SUN PROTECTION",
-            "SOLUTIONS",
+            "Sonnenparadies durch innovative Sonnenschutzlösungen",
         ],
         description:
-            "WITH OUR PERGOLAS, YOU CAN ENJOY THE OUTDOOR AREA ALL YEAR ROUND.",
-        ctaLabel: "TO THE PRODUCTS",
-        ctaHref: "#products",
+            "Mit unseren Pergolas können Sie das ganze Jahr durch den Außenbereich genießen.",
+        ctaLabel: "zu den Produkten",
+        ctaHref: "#hero3",
     },
     {
         id: 2,
         image: "/image/home-2.jpg", // <-- change to your real image
         titleLines: [
-            "DESIGN-MINDED SHADE",
-            "FOR MODERN OUTDOOR LIVING",
+            "Sonnenschutz für Ihre perfekte Outdoor-Oase in Wien!"
         ],
         description:
-            "DISCOVER FLEXIBLE SOLUTIONS THAT COMBINE AESTHETICS WITH DURABILITY.",
-        ctaLabel: "VIEW REFERENCES",
-        ctaHref: "#references",
+            "Bewegliche Lamellendächer bieten Flexibilität und Stil.",
+        ctaLabel: "zu den Produkten",
+        ctaHref: "#hero3",
     },
     {
         id: 3,
-        image: "/image/home-3.jpg", // <-- change to your real image
+        image: "/image/home-3.webp", // <-- change to your real image
         titleLines: [
-            "TAILOR-MADE PERGOLAS",
-            "FOR TERRACES AND GARDENS",
+            "Maßgeschneiderte Sonnenschutzsysteme",
         ],
         description:
-            "FROM CONSULTATION TO INSTALLATION — EVERYTHING FROM A SINGLE SOURCE.",
-        ctaLabel: "REQUEST A QUOTE",
-        ctaHref: "#contact",
+            "Glasdächer schaffen einen zusätzlichen Raum, ideal für Restaurants oder Private.",
+        ctaLabel: "zu den Produkten",
+        ctaHref: "#hero3",
     },
 ];
 
@@ -122,7 +118,7 @@ export default function HeroSlider() {
             {/* Controls (arrows + dots) */}
             <div className="pointer-events-none absolute inset-x-0 bottom-8 flex flex-col items-center gap-3">
                 {/* Arrows */}
-               {/*  <div className="pointer-events-auto flex gap-4">
+                {/*  <div className="pointer-events-auto flex gap-4">
                     <button
                         onClick={goPrev}
                         aria-label="Previous slide"
@@ -149,8 +145,8 @@ export default function HeroSlider() {
                             onClick={() => goToSlide(index)}
                             aria-label={`Go to slide ${index + 1}`}
                             className={`h-2.5 w-2.5 rounded-full transition-all ${index === current
-                                    ? "w-5 bg-[#62c3ac]"
-                                    : "bg-white/50 hover:bg-white/80"
+                                ? "w-5 bg-[#62c3ac]"
+                                : "bg-white/50 hover:bg-white/80"
                                 }`}
                         />
                     ))}

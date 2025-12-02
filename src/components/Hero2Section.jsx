@@ -19,9 +19,9 @@ export default function Hero2Section() {
                     <div>
                         {/* Heading */}
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight text-base-content">
-                            <span>Your sun protection expert</span>
+                            <span>Ihr Profi für</span>
                             <span className="block text-[#62c3ac]">
-                                in Vienna &amp; surrounding areas
+                                Sonnenschutz in Wien & Umgebung
                             </span>
                         </h2>
 
@@ -30,30 +30,20 @@ export default function Hero2Section() {
                             {/* Left column */}
                             <div className="space-y-4">
                                 <p>
-                                    TEMEL PLANEN has been your competent partner for sun protection
-                                    technology in Vienna and the surrounding area for over 30 years.
-                                    Our extensive product range includes only high-quality products,
-                                    custom-made and adapted to your specifications.
+                                    TEMEL PLANEN ist seit über 30 Jahren Ihr kompetenter Ansprechpartner für Sonnenschutztechnik in Wien und Umgebung. In unserem umfangreichen Sortiment finden Sie nur Qualitätsprodukte, die nach Ihren Vorstellungen maßgeschneidert und angepasst werden.
                                 </p>
                                 <p>
-                                    Through precise planning and installation, our specialists ensure
-                                    perfect lighting conditions and shading for your living space or
-                                    your catering business in Vienna.
+                                    Durch genaue Planung und Montage sorgen unsere Spezialisten für perfekte Lichtverhältnisse und Beschattung Ihres Wohnraums oder Ihres Gastronomiebetriebs in Wien.
                                 </p>
                             </div>
 
                             {/* Right column */}
                             <div className="mt-4 md:mt-0 space-y-4">
                                 <p>
-                                    Finding the right sun protection online is very difficult, which
-                                    is why we offer you the opportunity to view our solutions
-                                    directly in our showroom in Vienna. Should you have specific
-                                    requirements for your sun protection, our team will be happy to
-                                    advise you and design the perfect shading solution for you.
+                                    Den richtigen Sonnenschutz online zu finden ist sehr schwierig, daher bieten wir Ihnen die Möglichkeit unsere Lösungen direkt vor Ort in unserem Schauraum in Wien anzusehen. Sollten Sie besondere Anforderungen an Ihren Sonnenschutz haben, dann kann unser Team Sie gerne beraten und die passende Beschattungslösung für Sie konzipieren.
                                 </p>
                                 <p>
-                                    Modern, stylish and sustainable – our sun protection systems are
-                                    a highlight for you and your guests.
+                                    Modern, stylisch und nachhaltig – unsere Sonnenschutzsysteme sind ein Highlight für Sie und Ihre Gäste.
                                 </p>
                             </div>
                         </div>
@@ -61,13 +51,13 @@ export default function Hero2Section() {
                         {/* CTA */}
                         <div className="mt-8">
                             <a
-                                href="#products"
+                                href="#hero3"
                                 className="inline-flex items-center rounded-full bg-[#62c3ac]
                     px-8 py-2.5 text-sm font-semibold text-slate-900
                     shadow-xl shadow-emerald-500/30
                     transition-all duration-200 hover:bg-[#56b39c] hover:-translate-y-[2px]"
                             >
-                                TO THE PRODUCTS
+                                zu den Produkten
                             </a>
                         </div>
                     </div>

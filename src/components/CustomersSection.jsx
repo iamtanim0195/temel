@@ -38,7 +38,7 @@ export default function CustomersSection() {
             <div className="mx-auto max-w-6xl px-4 sm:px-6 text-center">
                 {/* Title */}
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-base-content">
-                    Customers who trust us
+                    Kunden die uns vertrauen
                 </h2>
 
                 {/* Subtle subtitle (optional) */}
@@ -68,7 +68,7 @@ export default function CustomersSection() {
                 {/* CTA button */}
                 <div className="mt-10 sm:mt-12">
                     <a
-                        href="#contact"
+                        href="/kontakt"
                         className="inline-flex items-center rounded-full bg-[#62c3ac]
                     px-8 py-2.5 text-sm font-semibold text-slate-900
                     shadow-xl shadow-emerald-500/30

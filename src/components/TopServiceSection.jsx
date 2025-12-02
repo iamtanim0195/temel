@@ -3,41 +3,47 @@
 import { FcGoogle } from "react-icons/fc";
 
 const REVIEWS = [
-    { id: 1, name: "Flip", timeAgo: "1 year ago", rating: 5, text: "" },
+    {
+        id: 1,
+        name: "Flip",
+        timeAgo: "vor 1 Jahr",
+        rating: 5,
+        text: ""
+    },
     {
         id: 2,
         name: "Olis S3",
-        timeAgo: "1 year ago",
+        timeAgo: "vor 1 Jahr",
         rating: 5,
-        text: "Everything worked perfectly. Good advice. Delivery and installation were fine. Minor issues were resolved...",
+        text: "alles hat bestens funktioniert. gute beratung. lieferung und montage ok. Kleinigkeiten wurden umgehend behoben.",
     },
     {
         id: 3,
-        name: "Firedog Channel",
-        timeAgo: "1 year ago",
+        name: "Miklós Szakács",
+        timeAgo: "vor 1 Jahr",
         rating: 5,
         text: "",
     },
     {
         id: 4,
-        name: "Claudia Lackner",
-        timeAgo: "1 year ago",
+        name: "Franz Autengruber",
+        timeAgo: "vor 1 Jahr",
         rating: 5,
-        text: "Since we have a very large patio, the “louvered roof” project was quite a challenge! Before we came across Temel Planen, we...",
+        text: "Wir haben bei der Fa. Temel eine Pergola mit elektrischem Antrieb und Glasschiebetüren in Auftrag gegeben. Der...",
     },
     {
         id: 5,
-        name: "Thomas M.",
-        timeAgo: "2 years ago",
+        name: "Bernhard Prokes",
+        timeAgo: "vor 1 Jahr",
         rating: 5,
-        text: "Professional and reliable from planning to installation. Highly recommended.",
+        text: "Wir haben vor rund 2 Monaten unsere Pergola geliefert bekommen und sind sehr zufrieden. Von der",
     },
     {
         id: 6,
-        name: "Anna B.",
-        timeAgo: "2 years ago",
+        name: "Thomas Elser",
+        timeAgo: "vor 1 Jahr",
         rating: 5,
-        text: "Fantastic quality and very friendly team. We enjoy our terrace all year round now.",
+        text: "Ein so Freundliches und kompetentes Unternehmen ist mittlerweile leider sehr selten zu finden, ich kann nur sagen;.",
     },
 ];
 
@@ -59,17 +65,14 @@ export default function TopServiceSection() {
                 {/* Top text block */}
                 <div className="flex flex-col md:flex-row items-start gap-6 md:gap-10 p-6 md:p-10">
                     <p className="max-w-xl text-gray-700 leading-relaxed text-sm md:text-base">
-                        Optimal weather protection from TEMEL PLANEN for your private and commercial needs.
-                        We're only satisfied when it's perfect for you. TEMEL PLANEN stands for experienced
-                        planning, top quality through in-house production, and professional installation.
-                        With TEMEL PLANEN, you get everything from a single source – exclusive and customized.
+                        Optimaler Wetterschutz durch TEMEL PLANEN für Ihre privaten und gewerblichen Wünsche. Wir sind erst zufrieden, wenn es für Sie perfekt ist. TEMEL PLANUNG steht für erfahrene Planung, beste Qualität durch eigene Produktion und professionelle Umsetzung beim Aufbau. Mit TEMEL PLANEN haben Sie alles aus einer Hand – exklusiv und individuell.
                     </p>
 
                     <div className="flex items-start gap-4">
                         <div className="w-2 bg-[#6A8C87] h-24" />
                         <div>
-                            <h3 className="text-2xl font-semibold text-gray-900">Our</h3>
-                            <h3 className="text-2xl font-semibold text-[#6A8C87]">top service</h3>
+                            <h3 className="text-2xl font-semibold text-gray-900">Unser</h3>
+                            <h3 className="text-2xl font-semibold text-[#6A8C87]">Top Service</h3>
                         </div>
                     </div>
                 </div>
@@ -119,7 +122,7 @@ export default function TopServiceSection() {
 
                                         {review.text && (
                                             <button className="mt-3 text-xs font-medium text-primary hover:underline self-start">
-                                                Read more
+                                                Weiterlesen
                                             </button>
                                         )}
                                     </article>
@@ -195,7 +198,7 @@ export default function TopServiceSection() {
 
                                                 {review.text && (
                                                     <button className="mt-3 text-[11px] sm:text-xs font-medium text-primary hover:underline self-start">
-                                                        Read more
+                                                        Weiterlesen
                                                     </button>
                                                 )}
                                             </article>
@@ -224,9 +227,9 @@ export default function TopServiceSection() {
 
                 {/* Rating footer */}
                 <div className="mt-6 text-center text-xs sm:text-sm text-base-content/70">
-                    <span className="font-semibold">Google</span> Overall Rating{" "}
-                    <span className="font-semibold">4.8</span> out of 5 based on{" "}
-                    <span className="font-semibold">168 reviews</span>
+                    <span className="font-semibold">Google</span> Gesamtbewertung{" "}
+                    <span className="font-semibold">4.8</span> von 5,basierend auf{" "}
+                    <span className="font-semibold">168 Bewertungen</span>
                 </div>
             </div>
         </section>

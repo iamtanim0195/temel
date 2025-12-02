@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 /* custom css */
 .theme-toggle-btn {
   padding: 6px 12px;
