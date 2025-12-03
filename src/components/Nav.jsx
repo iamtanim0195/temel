@@ -152,7 +152,7 @@ const Nav = () => {
             {menuOpen && (
                 <nav className="md:hidden border-t border-white/20 px-3 pb-3">
                     <Top />
-                    <div className="bg-black/70 text-white rounded-xl w-full mt-2 p-2">
+                    <div className="bg-black/70 text-white rounded-xl w-full mt-2 p-2 text-xl">
                         {renderMobileItems(NAV_ITEMS)}
                     </div>
                 </nav>

@@ -175,12 +175,12 @@ export default function HeroImageCollage({ items = DEFAULT_ITEMS }) {
                                 {(item.title || item.description) && (
                                     <div className="mt-1">
                                         {item.title && (
-                                            <h3 className="text-sm sm:text-base md:text-lg font-semibold ">
+                                            <h3 className="text-sm text-white  md:text-lg font-semibold ">
                                                 {item.title}
                                             </h3>
                                         )}
                                         {item.description && (
-                                            <p className="mt-2 text-[11px] sm:text-xs md:text-sm max-w-md">
+                                            <p className="mt-2 text-white  text-[11px] sm:text-xs md:text-sm max-w-md">
                                                 {item.description}
                                             </p>
                                         )}
