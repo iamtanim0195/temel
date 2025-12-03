@@ -151,7 +151,7 @@ const Nav = () => {
             {/* MOBILE NAV */}
             {menuOpen && (
                 <nav className="md:hidden border-t border-white/20 px-3 pb-3">
-                    <Top />
+                    {/*  <Top /> */}
                     <div className="bg-black/70 text-white rounded-xl w-full mt-2 p-2 text-2xl">
                         {renderMobileItems(NAV_ITEMS)}
                     </div>
@@ -235,10 +235,10 @@ const renderMobileItems = (items, level = 0) => (
                 <li key={item.label}>
                     <details>
                         <summary className="py-2 flex justify-between cursor-pointer">
-                            <Link href={item.href} className="flex-1">
+                            <p className="flex-1">
                                 {item.label}
-                            </Link>
-                            <span className="text-5xl w-10 px-3 translate-x-[7px] translate-y-[-7px]">▾</span>
+                            </p>
+                            <span className="text-3xl w-10 px-3 translate-x-[7px] translate-y-[-7px]">▾</span>
                         </summary>
 
                         <div className="mt-1">
