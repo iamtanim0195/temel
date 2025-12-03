@@ -152,7 +152,7 @@ const Nav = () => {
             {menuOpen && (
                 <nav className="md:hidden border-t border-white/20 px-3 pb-3">
                     <Top />
-                    <div className="bg-black/70 text-white rounded-xl w-full mt-2 p-2 text-xl">
+                    <div className="bg-black/70 text-white rounded-xl w-full mt-2 p-2 text-2xl">
                         {renderMobileItems(NAV_ITEMS)}
                     </div>
                 </nav>
@@ -238,7 +238,7 @@ const renderMobileItems = (items, level = 0) => (
                             <Link href={item.href} className="flex-1">
                                 {item.label}
                             </Link>
-                            <span>▾</span>
+                            <span className="text-5xl w-10 px-3 translate-x-[7px] translate-y-[-7px]">▾</span>
                         </summary>
 
                         <div className="mt-1">
