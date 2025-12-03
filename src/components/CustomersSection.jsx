@@ -58,7 +58,7 @@ export default function CustomersSection() {
                     px-8 py-2.5 text-sm font-semibold text-slate-900
                     shadow-xl shadow-emerald-500/30
                     transition-all duration-200 hover:bg-[#56b39c] hover:-translate-y-[2px]"                    >
-                        REQUEST A NON-BINDING OFFER
+                        Unverbindliches Angebot anfordern
                     </a>
                 </div>
             </div>

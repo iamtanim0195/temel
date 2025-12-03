@@ -24,12 +24,17 @@ export default function HeroSection() {
             <HeroSlider />
 
             {/* HEADER + NAV */}
-            <header className="absolute inset-x-0 top-0 z-20 bg-gradient-to-b from-black/70 via-black/40 to-transparent">
+            <header className=" absolute inset-x-0 top-0 z-20 bg-gradient-to-b from-black/70 via-black/40 to-transparent">
                 <div className="mx-auto max-w-6xl px-4 sm:px-6 pt-2 pb-3 sm:pb-4 ">
                     {/* Top bar (socials + theme toggle) */}
-                    <Top />
+                    <div className="hidden sm:block">
+                        <Top />
+                    </div>
 
-                    <Nav />
+                    <div /* className="fixed inset-x-0 top-10 z-20 " */>
+                        <Nav />
+                    </div>
+
                 </div>
 
 

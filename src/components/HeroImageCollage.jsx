@@ -16,7 +16,7 @@ const DEFAULT_ITEMS = [
         id: 2,
         image: "/image/home-1.webp",
 
-        title: "Pergola systems",
+        title: "Pergolasysteme",
         description:
             "Ein Sonnenschutzsystem, bei dem Sie draußen sein und doch das geschützte Gefühl eines Raumes genießen können. Unsere maßgeschneiderten Pergolasysteme verwandeln Ihre Terrasse in einen vollwertigen Wohlfühlbereich.",
     },
@@ -165,9 +165,9 @@ export default function HeroImageCollage({ items = DEFAULT_ITEMS }) {
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
 
                             {/* text */}
-                            <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5 md:p-6">
+                            <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5 md:p-6 ">
                                 {item.label && (
-                                    <p className="text-[10px] sm:text-xs font-semibold tracking-[0.22em] uppercase text-base-100/80">
+                                    <p className="text-[10px] sm:text-xs font-semibold tracking-[0.22em] uppercase ">
                                         {item.label}
                                     </p>
                                 )}
@@ -175,12 +175,12 @@ export default function HeroImageCollage({ items = DEFAULT_ITEMS }) {
                                 {(item.title || item.description) && (
                                     <div className="mt-1">
                                         {item.title && (
-                                            <h3 className="text-sm sm:text-base md:text-lg font-semibold text-base-100">
+                                            <h3 className="text-sm sm:text-base md:text-lg font-semibold ">
                                                 {item.title}
                                             </h3>
                                         )}
                                         {item.description && (
-                                            <p className="mt-2 text-[11px] sm:text-xs md:text-sm text-base-100/85 max-w-md">
+                                            <p className="mt-2 text-[11px] sm:text-xs md:text-sm max-w-md">
                                                 {item.description}
                                             </p>
                                         )}

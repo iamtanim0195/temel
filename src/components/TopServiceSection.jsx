@@ -64,14 +64,14 @@ export default function TopServiceSection() {
             <div className="mx-auto max-w-6xl px-4 sm:px-6">
                 {/* Top text block */}
                 <div className="flex flex-col md:flex-row items-start gap-6 md:gap-10 p-6 md:p-10">
-                    <p className="max-w-xl text-gray-700 leading-relaxed text-sm md:text-base">
+                    <p className="max-w-xl  leading-relaxed text-sm md:text-base">
                         Optimaler Wetterschutz durch TEMEL PLANEN für Ihre privaten und gewerblichen Wünsche. Wir sind erst zufrieden, wenn es für Sie perfekt ist. TEMEL PLANUNG steht für erfahrene Planung, beste Qualität durch eigene Produktion und professionelle Umsetzung beim Aufbau. Mit TEMEL PLANEN haben Sie alles aus einer Hand – exklusiv und individuell.
                     </p>
 
                     <div className="flex items-start gap-4">
                         <div className="w-2 bg-[#6A8C87] h-24" />
                         <div>
-                            <h3 className="text-2xl font-semibold text-gray-900">Unser</h3>
+                            <h3 className="text-2xl font-semibold ">Unser</h3>
                             <h3 className="text-2xl font-semibold text-[#6A8C87]">Top Service</h3>
                         </div>
                     </div>

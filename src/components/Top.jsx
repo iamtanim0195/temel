@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import ThemeToggle from "@/components/ThemeToggle";
+import DaisyTheme from "./DaisyTheme";
 
 export default function Top() {
     return (
@@ -75,11 +76,14 @@ export default function Top() {
                         />
                     </a>
                 </div>
-                {/* 
-                <div className="icon-float">
+
+                {/* <div className="icon-float">
                     <ThemeToggle />
+                </div> */}
+                <div className="hidden sm:block icon-float">
+                    <DaisyTheme />
                 </div>
-                */}
+
             </div>
         </div>
     );

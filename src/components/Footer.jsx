@@ -70,7 +70,7 @@ const footerColumns = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#33373a] text-white pt-8 pb-6 mt-2">
+    <footer className="bg-[#33373a] text-white pt-8 pb-6 ">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Logo */}
         <div className="flex justify-center">
