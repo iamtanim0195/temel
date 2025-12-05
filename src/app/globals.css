@@ -5,6 +5,11 @@ html {
   scroll-behavior: smooth;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 /* custom css */
 .theme-toggle-btn {

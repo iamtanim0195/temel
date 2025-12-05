@@ -192,7 +192,7 @@ const DesktopMegaItem = ({ item }) => (
                             {section.label}
                         </Link>
 
-                        <div className="h-[2px] bg-[#5f9489] w-32" />
+                        <div className="h-0.5 bg-[#5f9489] w-32" />
 
                         {section.children && (
                             <ul className="space-y-1 text-sm">
