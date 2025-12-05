@@ -84,7 +84,7 @@ const TemelSonnenschutzConfigurator = () => {
             )
             .then(
                 (response) => {
-                    toast.success("Email sent successfully!");
+                    toast.success("E-Mail erfolgreich gesendet!");
                     setFormData({
                         project_type: "",
                         area_type: [],
@@ -105,7 +105,7 @@ const TemelSonnenschutzConfigurator = () => {
                     });
                 },
                 (error) => {
-                    toast.error("Failed to send email. Please try again.");
+                    toast.error("E-Mail konnte nicht gesendet werden. Bitte versuche es erneut.");
                 }
             );
     };
@@ -118,7 +118,7 @@ const TemelSonnenschutzConfigurator = () => {
                     Finden Sie Ihr perfektes Sonnenschutz-System
                 </h1>
                 <p className="text-gray-600 mt-2">
-                    Get your louvered roof, pergola, awning, sun sail, or locking system in just a few steps – perfectly suited to your project in Vienna & Lower Austria.
+                    Erhalten Sie Ihr Lamellendach, Pergola, Markise, Sonnensegel oder Schließsystem in nur wenigen Schritten – perfekt auf Ihr Projekt in Wien & Niederösterreich abgestimmt.
                 </p>
             </div>
 
@@ -139,7 +139,7 @@ const TemelSonnenschutzConfigurator = () => {
                 {/* Step 1: Project Type */}
                 {step === 1 && (
                     <div>
-                        <h2 className="text-xl font-semibold mb-4">What are you planning to use the sun protection for?</h2>
+                        <h2 className="text-xl font-semibold mb-4">Wofür planen Sie den Sonnenschutz zu verwenden?</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mb-4">
                             {["private", "balkon", "gastro", "other"].map((type) => (
                                 <label key={type} className="flex items-center p-4 border rounded-lg hover:bg-teal-50">
@@ -151,15 +151,15 @@ const TemelSonnenschutzConfigurator = () => {
                                         className="mr-4"
                                     />
                                     <div>
-                                        <strong>{type === "private" ? "Private Terrace / Garden" : type === "balkon" ? "Balcony / Loggia" : type === "gastro" ? "Gastronomy / Hotel Industry" : "Other Project"}</strong>
-                                        <small className="text-gray-500">{type === "private" ? "Home, family, retreat" : type === "balkon" ? "Apartment, limited space" : type === "gastro" ? "Outdoor dining area, beer garden, rooftop" : "Office, business, special solution"}</small>
+                                        <strong>{type === "private" ? "Private Terrasse / Garten" : type === "balkon" ? "Balkon / Loggia" : type === "gastro" ? "Gastronomie / Hotelgewerbe" : "Anderes Projekt"}</strong>
+                                        <small className="text-gray-500">{type === "private" ? "Zuhause, Familie, Rückzugsort" : type === "balkon" ? "Wohnung, begrenzter Raum" : type === "gastro" ? "Außengastronomie, Biergarten, Dachterrasse" : "Büro, Business, Sonderlösung"}</small>
                                     </div>
                                 </label>
                             ))}
                         </div>
                         <div className="flex justify-between">
                             <button type="button" className="text-teal-600" onClick={nextStep}>
-                                Next
+                                Weiter
                             </button>
                         </div>
                     </div>
@@ -168,16 +168,32 @@ const TemelSonnenschutzConfigurator = () => {
                 {/* Step 2: Area Type */}
                 {step === 2 && (
                     <div>
-                        <h2 className="text-xl font-semibold mb-4">Which area do you want to cover?</h2>
+                        <h2 className="text-xl font-semibold mb-4">Welches Gebiet möchten Sie abdecken?</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
-                            {[
-                                { value: "terrace", label: "Terrace at home" },
-                                { value: "garden", label: "Freestanding garden area" },
-                                { value: "balcony", label: "Balcony / Loggia" },
-                                { value: "rooftop", label: "Rooftop / Roof terrace" },
-                                { value: "wintergarden", label: "Winter garden / Glass roof" },
-                                { value: "gastgarten", label: "Gastgarten / Beer garden" },
-                            ].map((area) => (
+                            {[{
+                                value: "terrace",
+                                label: "Terrasse zu Hause"
+                            },
+                            {
+                                value: "garden",
+                                label: "Freistehender Gartenbereich"
+                            },
+                            {
+                                value: "balcony",
+                                label: "Balkon / Loggia"
+                            },
+                            {
+                                value: "rooftop",
+                                label: "Dachterrasse / Dachterrasse"
+                            },
+                            {
+                                value: "wintergarden",
+                                label: "Wintergarten / Glasdach"
+                            },
+                            {
+                                value: "gastgarten",
+                                label: "Gastgarten / Biergarten"
+                            }].map((area) => (
                                 <label key={area.value} className="flex items-center p-4 border rounded-lg hover:bg-teal-50">
                                     <input
                                         type="checkbox"
@@ -194,10 +210,10 @@ const TemelSonnenschutzConfigurator = () => {
                         </div>
                         <div className="flex justify-between">
                             <button type="button" className="text-teal-600" onClick={prevStep}>
-                                Back
+                                Zurück
                             </button>
                             <button type="button" className="text-teal-600" onClick={nextStep}>
-                                Next
+                                Weiter
                             </button>
                         </div>
                     </div>
@@ -206,10 +222,10 @@ const TemelSonnenschutzConfigurator = () => {
                 {/* Step 3: Area Dimensions */}
                 {step === 3 && (
                     <div>
-                        <h2 className="text-xl font-semibold mb-4">How does your area look like?</h2>
+                        <h2 className="text-xl font-semibold mb-4">Wie sieht Ihr Bereich aus?</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
                             <div className="flex flex-col">
-                                <label>Width (in meters)</label>
+                                <label>Breite (in Metern)</label>
                                 <input
                                     type="text"
                                     name="width"
@@ -219,7 +235,7 @@ const TemelSonnenschutzConfigurator = () => {
                                 />
                             </div>
                             <div className="flex flex-col">
-                                <label>Depth (in meters)</label>
+                                <label>Tiefe (in Metern)</label>
                                 <input
                                     type="text"
                                     name="depth"
@@ -229,7 +245,7 @@ const TemelSonnenschutzConfigurator = () => {
                                 />
                             </div>
                             <div className="flex flex-col">
-                                <label>Height (optional)</label>
+                                <label>Höhe (optional)</label>
                                 <input
                                     type="text"
                                     name="height"
@@ -241,31 +257,31 @@ const TemelSonnenschutzConfigurator = () => {
                         </div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                             <div>
-                                <label>Orientation</label>
+                                <label>Ausrichtung</label>
                                 <select name="orientation" onChange={handleChange} className="p-2 border rounded">
-                                    <option value="">Please select</option>
-                                    <option value="south">South</option>
-                                    <option value="east">East</option>
+                                    <option value="">Bitte wählen</option>
+                                    <option value="south">Süd</option>
+                                    <option value="east">Ost</option>
                                     <option value="west">West</option>
-                                    <option value="north">North</option>
+                                    <option value="north">Nord</option>
                                 </select>
                             </div>
                             <div>
-                                <label>Wind Situation</label>
+                                <label>Windverhältnisse</label>
                                 <select name="wind" onChange={handleChange} className="p-2 border rounded">
-                                    <option value="">Please select</option>
+                                    <option value="">Bitte wählen</option>
                                     <option value="normal">Normal</option>
-                                    <option value="windy">Windy</option>
-                                    <option value="strongwind">Strong wind</option>
+                                    <option value="windy">Windig</option>
+                                    <option value="strongwind">Starker Wind</option>
                                 </select>
                             </div>
                         </div>
                         <div className="flex justify-between">
                             <button type="button" className="text-teal-600" onClick={prevStep}>
-                                Back
+                                Zurück
                             </button>
                             <button type="button" className="text-teal-600" onClick={nextStep}>
-                                Next
+                                Weiter
                             </button>
                         </div>
                     </div>
@@ -274,15 +290,15 @@ const TemelSonnenschutzConfigurator = () => {
                 {/* Step 4: Recommendations */}
                 {step === 4 && (
                     <div>
-                        <h2 className="text-xl font-semibold mb-4">Our recommendations for your project</h2>
-                        <p>Based on your information, we suggest the following systems. You can discuss everything in detail with Temel later.</p>
+                        <h2 className="text-xl font-semibold mb-4">Unsere Empfehlungen für Ihr Projekt</h2>
+                        <p>Basierend auf Ihren Angaben empfehlen wir die folgenden Systeme. Alles Weitere können Sie später mit Temel besprechen.</p>
                         {/* Render recommended products here */}
                         <div className="flex justify-between">
                             <button type="button" className="text-teal-600" onClick={prevStep}>
-                                Back
+                                Zurück
                             </button>
                             <button type="button" className="text-teal-600" onClick={nextStep}>
-                                Next
+                                Weiter
                             </button>
                         </div>
                     </div>
@@ -291,9 +307,9 @@ const TemelSonnenschutzConfigurator = () => {
                 {/* Step 5: Additional Features */}
                 {step === 5 && (
                     <div>
-                        <h2 className="text-xl font-semibold mb-4">Which additional features are interesting for you?</h2>
+                        <h2 className="text-xl font-semibold mb-4">Welche zusätzlichen Funktionen sind für Sie interessant?</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mb-4">
-                            {["Insect protection", "Lighting", "Heaters", "Windproof screens"].map((addon) => (
+                            {["Insektenschutz", "Beleuchtung", "Heizstrahler", "Windschutz"].map((addon) => (
                                 <label key={addon} className="flex items-center p-4 border rounded-lg hover:bg-teal-50">
                                     <input
                                         type="checkbox"
@@ -309,7 +325,7 @@ const TemelSonnenschutzConfigurator = () => {
                             ))}
                         </div>
                         <div>
-                            <label>Notes (optional)</label>
+                            <label>Bemerkungen (optional)</label>
                             <textarea
                                 name="message"
                                 value={formData.message}
@@ -319,10 +335,10 @@ const TemelSonnenschutzConfigurator = () => {
                         </div>
                         <div className="flex justify-between">
                             <button type="button" className="text-teal-600" onClick={prevStep}>
-                                Back
+                                Zurück
                             </button>
                             <button type="button" className="text-teal-600" onClick={nextStep}>
-                                Next
+                                Weiter
                             </button>
                         </div>
                     </div>
@@ -331,10 +347,10 @@ const TemelSonnenschutzConfigurator = () => {
                 {/* Final Step: Contact Information */}
                 {step === 6 && (
                     <div>
-                        <h2 className="text-xl font-semibold mb-4">Almost done – how can we contact you?</h2>
+                        <h2 className="text-xl font-semibold mb-4">Fast geschafft – wie können wir Sie kontaktieren?</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mb-4">
                             <div className="flex flex-col">
-                                <label>Your Name*</label>
+                                <label>Ihr Name*</label>
                                 <input
                                     type="text"
                                     name="name"
@@ -345,7 +361,7 @@ const TemelSonnenschutzConfigurator = () => {
                                 />
                             </div>
                             <div className="flex flex-col">
-                                <label>Your Email*</label>
+                                <label>Ihre E-Mail*</label>
                                 <input
                                     type="email"
                                     name="email"
@@ -358,7 +374,7 @@ const TemelSonnenschutzConfigurator = () => {
                         </div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                             <div className="flex flex-col">
-                                <label>Your Phone*</label>
+                                <label>Ihr Telefon*</label>
                                 <input
                                     type="text"
                                     name="phone"
@@ -369,7 +385,7 @@ const TemelSonnenschutzConfigurator = () => {
                                 />
                             </div>
                             <div className="flex flex-col">
-                                <label>Your ZIP Code / City*</label>
+                                <label>Ihr ZIP-Code / Stadt*</label>
                                 <input
                                     type="text"
                                     name="zip"
@@ -382,10 +398,10 @@ const TemelSonnenschutzConfigurator = () => {
                         </div>
                         <div className="flex justify-between">
                             <button type="button" className="text-teal-600" onClick={prevStep}>
-                                Back
+                                Zurück
                             </button>
                             <button type="submit" className="bg-teal-600 text-white px-4 py-2 rounded-full">
-                                Submit
+                                Absenden
                             </button>
                         </div>
                     </div>
